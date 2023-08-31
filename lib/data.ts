@@ -28,9 +28,9 @@ export const links = [
 
 export const projectsData = [
   {
-    title: 'Обучающая платформа "Flash Cards"',
+    title: '"Flash Cards"',
     description:
-      '"Flash Cards" - это онлайн-платформа для обучения на основе повторения и активного запоминания информации ' +
+      'Онлайн-платформа для обучения на основе повторения и активного запоминания информации ' +
       'с использованием карточек.',
     tags: [
       'React',
@@ -44,14 +44,24 @@ export const projectsData = [
     imageUrl: cardsImg,
   },
   {
-    title: 'Интернет-магазин "E-PLUG"',
+    title: '"E-PLUG"',
     description:
-      'Это демо-версия фронтенд-части интернет-магазина, которая ' +
-      'представляет адаптивный дизайн для мобильных устройств. На сайте пользователь может ' +
-      'легко находить товары, ознакомиться с их описанием, добавить их в корзину и сортировать ' +
-      'по различным параметрам.',
+      'Интернет-магазина с адаптивным дизайном, где пользователи могут находить товары, ознакомиться с их ' +
+      'описанием, добавлять их в корзину и сортировать по различным параметрам.',
     tags: ['React', 'TypeScript', 'SCSS', 'Redux Toolkit'],
     imageUrl: ePlugImg,
+    site: 'https://clubber1337.github.io/e-commerce-website-e-plug/',
+    code: 'https://github.com/cLubber1337/e-commerce-website-e-plug',
+  },
+  {
+    title: 'Социальная сеть',
+    description:
+      'Онлайн-платформа позволяющая найти и добавить себе друзей. Есть возможно редактирование профиля, ' +
+      'который видят другие пользователи.',
+    tags: ['React', 'TypeScript', 'Redux', 'MUI'],
+    imageUrl: socialMediaImg,
+    site: 'https://clubber1337.github.io/social-network',
+    code: 'https://github.com/cLubber1337/social-network',
   },
   {
     title: 'Менеджер задач',
@@ -59,12 +69,7 @@ export const projectsData = [
       'Приложение, которое помогает вам управлять своими задачами и организовывать свою работу или личные дела.',
     tags: ['React', 'TypeScript', 'Redux Toolkit', 'MUI', 'Formik'],
     imageUrl: taskManager,
-  },
-  {
-    title: 'Социальная сеть',
-    description: 'Онлайн-платформа по поиску друзей и знакомств.',
-    tags: ['React', 'TypeScript', 'Redux', 'Tailwind', 'Framer'],
-    imageUrl: socialMediaImg,
+    site: 'https://clubber1337.github.io/task-manager',
   },
 ] as const
 
