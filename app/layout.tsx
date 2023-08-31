@@ -4,7 +4,7 @@ import { ReactNode } from 'react'
 import { Montserrat } from 'next/font/google'
 import { Header } from '@/components/header'
 
-const inter = Montserrat({ subsets: ['cyrillic'] })
+const inter = Montserrat({ subsets: ['cyrillic'], weight: '500' })
 
 export const metadata = {
   title: 'Andrey Soroko | Portfolio',
