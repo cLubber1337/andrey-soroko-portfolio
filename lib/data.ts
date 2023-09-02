@@ -42,11 +42,13 @@ export const projectsData = [
       'React Hook Form',
     ],
     imageUrl: cardsImg,
+    site: "https://flash-cards-pro.vercel.app/",
+    code: "https://github.com/cLubber1337/flash-cards-pro"
   },
   {
     title: '"E-PLUG"',
     description:
-      'Интернет-магазина с адаптивным дизайном, где пользователи могут находить товары, ознакомиться с их ' +
+      'Интернет-магазин с адаптивным дизайном, где пользователи могут находить товары, ознакомиться с их ' +
       'описанием, добавлять их в корзину и сортировать по различным параметрам.',
     tags: ['React', 'TypeScript', 'SCSS', 'Redux Toolkit'],
     imageUrl: ePlugImg,
@@ -56,7 +58,7 @@ export const projectsData = [
   {
     title: 'Социальная сеть',
     description:
-      'Онлайн-платформа позволяющая найти и добавить себе друзей. Есть возможно редактирование профиля, ' +
+      'Онлайн-платформа позволяющая найти и добавить себе друзей. Есть возможность редактирование профиля, ' +
       'который видят другие пользователи.',
     tags: ['React', 'TypeScript', 'Redux', 'MUI'],
     imageUrl: socialMediaImg,
@@ -70,6 +72,7 @@ export const projectsData = [
     tags: ['React', 'TypeScript', 'Redux Toolkit', 'MUI', 'Formik'],
     imageUrl: taskManager,
     site: 'https://clubber1337.github.io/task-manager',
+    code: "https://github.com/cLubber1337/task-manager",
   },
 ] as const
 

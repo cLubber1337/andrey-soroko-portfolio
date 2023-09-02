@@ -9,7 +9,7 @@ import { BiLinkExternal } from 'react-icons/bi'
 
 type ProjectProps = (typeof projectsData)[number]
 
-export const Project = ({ title, description, tags, imageUrl }: ProjectProps) => {
+export const Project = ({ title, description, tags, imageUrl, code, site }: ProjectProps) => {
   const ref = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -40,7 +40,7 @@ export const Project = ({ title, description, tags, imageUrl }: ProjectProps) =>
           <p className="flex gap-4 py-4">
             <a
               className="flex items-center gap-2 hover:text-slate-950 transition"
-              href=""
+              href={code}
               target="_blank"
             >
               <BsGithub size={24} />
@@ -48,7 +48,7 @@ export const Project = ({ title, description, tags, imageUrl }: ProjectProps) =>
             </a>
             <a
               className="flex items-center gap-2 hover:text-slate-950 transition"
-              href=""
+              href={site}
               target="_blank"
             >
               <BiLinkExternal size={24} />

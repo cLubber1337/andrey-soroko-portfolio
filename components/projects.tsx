@@ -1,10 +1,14 @@
+'use client'
 import { SectionHeading } from '@/components/section-heading'
 import { projectsData } from '@/lib/data'
 import { Project } from '@/components/project'
+import { useActiveSectionInView } from '@/lib/hooks'
 
 export const Projects = () => {
+  const { ref } = useActiveSectionInView({ name: 'Проекты', threshold: 0.2 })
+
   return (
-    <section className="">
+    <section ref={ref} id="projects" className="scroll-mt-32">
       <SectionHeading title="Мои проекты" />
       <div>
         {projectsData.map(project => {
