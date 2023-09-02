@@ -2,12 +2,12 @@ import { useInView } from 'react-intersection-observer'
 import { SectionName, useActiveSection } from '@/context/active-section-context'
 import { useEffect } from 'react'
 
-type Props = {
+type useActiveSectionInViewProps = {
   name: SectionName
-  threshold: number
+  threshold?: number
 }
 
-export const useActiveSectionInView = ({ name, threshold = 0.5 }: Props) => {
+export const useActiveSectionInView = ({ name, threshold = 0.5 }: useActiveSectionInViewProps) => {
   const { ref, inView } = useInView({ threshold })
   const { setActiveSection, lastClickTime } = useActiveSection()
 
