@@ -24,7 +24,7 @@ export const Header = () => {
                 <Link
                   className={clsx(
                     'text-sm whitespace-nowrap py-1 px-2 text-gray-500 rounded-full ' +
-                      'px-1 font-semibold transition hover:text-gray-950 ' +
+                      'px-1 font-semibold transition tracking-wide hover:text-gray-950 ' +
                       'sm:px-3 sm:py-2 sm:text-base cursor-pointer',
                     activeSection === name && 'bg-pink-100/70 text-slate-700'
                   )}

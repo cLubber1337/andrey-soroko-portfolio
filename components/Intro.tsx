@@ -6,9 +6,11 @@ import Link from 'next/link'
 import { BsArrowRight, BsLinkedin, BsTelegram } from 'react-icons/bs'
 import { HiDownload } from 'react-icons/hi'
 import { useActiveSectionInView } from '@/lib/hooks'
+import { useActiveSection } from '@/context/active-section-context'
 
 export const Intro = () => {
   const { ref } = useActiveSectionInView({ name: 'Главная', threshold: 1 })
+  const { setActiveSection, setLastClickTime } = useActiveSection()
 
   return (
     <section ref={ref} id="home" className="mb-28 max-w-6xl text-center sm:mb-0 scroll-mt-[100rem]">
@@ -63,25 +65,29 @@ export const Intro = () => {
         <span className="underline"> React (Next.js)</span>.
       </motion.h1>
       <motion.div
-        className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
+        className="flex flex-col flex-wrap items-center gap-4 sm:flex-row sm:justify-center"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
       >
         <Link
-          className="group flex items-center gap-2 bg-slate-800 text-white px-6
+          className="group flex items-center gap-2 bg-slate-800 tracking-wider text-white px-7
           py-4 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-slate-950
           active:scale-105
           transition-all"
           href="#contact"
+          onClick={() => {
+            setActiveSection('Контакты')
+            setLastClickTime(Date.now())
+          }}
         >
           Связаться со мной{' '}
           <BsArrowRight className="opacity-80 group-hover:translate-x-1 transition" />
         </Link>
         <a
-          className="group bg-white font-semibold px-7 py-3 flex items-center gap-2
+          className="group bg-white font-semibold tracking-wider px-7 py-4 flex items-center gap-2
           rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105
-          transition-all cursor-pointer border border-black/20
+          transition-all cursor-pointer borderBlack
           hover:text-slate-950"
           href="/AndreySoroko.pdf"
           download
@@ -92,8 +98,8 @@ export const Intro = () => {
           <a
             className="bg-white p-4 text-gray-700 hover:text-slate-950 flex
         items-center rounded-full focus:scale-[1.15]
-        hover:scale-[1.15] active:scale-105 transition-all cursor-pointer border
-        border-black/20"
+        hover:scale-[1.15] active:scale-105 transition-all cursor-pointer borderBlack
+        "
             href="https://t.me/AndreySoroko"
             target="_blank"
           >
@@ -102,8 +108,8 @@ export const Intro = () => {
           <a
             className="bg-white p-4 text-gray-700 hover:text-slate-950 flex
         items-center rounded-full focus:scale-[1.15]
-        hover:scale-[1.15] active:scale-105 transition-all cursor-pointer border
-        border-black/20"
+        hover:scale-[1.15] active:scale-105 transition-all cursor-pointer
+        borderBlack"
             href="https://www.linkedin.com/in/andrey-soroko/"
             target="_blank"
           >

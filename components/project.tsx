@@ -28,7 +28,7 @@ export const Project = ({ title, description, tags, imageUrl, code, site }: Proj
       className="group mb-3 sm:mb-8 last:mb-0"
     >
       <article
-        className="bg-gray-100 max-w-[50rem] border border-black/5 rounded-lg overflow-hidden sm:pr-0 relative
+        className="bg-gray-100 max-w-[50rem] border border-black/10 rounded-lg overflow-hidden sm:pr-0 relative
     sm:h-[23rem] hover:bg-gray-200 transition sm:group-even:pl-0 sm:pl-4"
       >
         <div
@@ -36,7 +36,7 @@ export const Project = ({ title, description, tags, imageUrl, code, site }: Proj
         flex flex-col h-full csm:group-even:ml-[22rem] sm:group-even:ml-[15rem]"
         >
           <h3 className="text-2xl font-semibold">{title}</h3>
-          <p className="mt-2 leading-relaxed">{description}</p>
+          <p className="mt-2 text-slate-600 leading-relaxed">{description}</p>
           <p className="flex gap-4 py-4">
             <a
               className="flex items-center gap-2 hover:text-slate-950 transition"
@@ -58,8 +58,7 @@ export const Project = ({ title, description, tags, imageUrl, code, site }: Proj
           <ul className="flex flex-wrap gap-2 mt-4 sm:mt-auto">
             {tags.map(tag => (
               <li
-                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full
-              dark:text-white/70"
+                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full"
                 key={tag}
               >
                 {tag}

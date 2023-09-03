@@ -20,7 +20,7 @@ const fadeInAnimate = {
 }
 
 export const Skills = () => {
-  const { ref } = useActiveSectionInView({ name: 'Навыки' })
+  const { ref } = useActiveSectionInView({ name: 'Навыки', threshold: 0.7 })
 
   return (
     <section className="mb-28 max-w-[50rem] scroll-mt-32 text-center sm:mb-0" ref={ref} id="skills">
@@ -29,7 +29,7 @@ export const Skills = () => {
         {skillsData.map((skill, index) => {
           return (
             <motion.li
-              className="bg-white border border-black/20 py-2 px-4 rounded-xl"
+              className="bg-white borderBlack py-2 px-4 rounded-xl"
               key={index}
               variants={fadeInAnimate}
               initial="initial"
