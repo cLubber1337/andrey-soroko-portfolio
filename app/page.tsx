@@ -4,6 +4,7 @@ import { About } from '@/components/about'
 import { Projects } from '@/components/projects'
 import { Skills } from '@/components/skills'
 import { Contacts } from '@/components/contacts'
+import { ThemeSwitcher } from '@/components/theme-switcher'
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Skills />
       <SectionDivider />
       <Contacts />
+      <ThemeSwitcher />
     </main>
   )
 }

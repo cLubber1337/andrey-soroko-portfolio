@@ -7,7 +7,7 @@ export type SectionName = (typeof links)[number]['name']
 type Props = {
   children: ReactNode
 }
-export const ActiveSectionContext = createContext<{
+export const ActiveSectionProvider = createContext<{
   activeSection: SectionName
   setActiveSection: Dispatch<SectionName>
   lastClickTime: number
@@ -17,7 +17,7 @@ export const ActiveSectionContextProvider = ({ children }: Props) => {
   const [activeSection, setActiveSection] = useState<SectionName>('Главная')
   const [lastClickTime, setLastClickTime] = useState(0)
   return (
-    <ActiveSectionContext.Provider
+    <ActiveSectionProvider.Provider
       value={{
         activeSection,
         setActiveSection,
@@ -26,12 +26,12 @@ export const ActiveSectionContextProvider = ({ children }: Props) => {
       }}
     >
       {children}
-    </ActiveSectionContext.Provider>
+    </ActiveSectionProvider.Provider>
   )
 }
 
 export const useActiveSection = () => {
-  const context = useContext(ActiveSectionContext)
+  const context = useContext(ActiveSectionProvider)
   if (!context) {
     throw new Error('useActiveSection must be used within a ActiveSectionContextProvider')
   }

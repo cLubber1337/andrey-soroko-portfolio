@@ -29,7 +29,8 @@ export const Skills = () => {
         {skillsData.map((skill, index) => {
           return (
             <motion.li
-              className="bg-white borderBlack py-2 px-4 rounded-xl"
+              className="bg-white borderBlack py-2 px-4 rounded-xl dark:bg-white/10
+              dark:text-white/75"
               key={index}
               variants={fadeInAnimate}
               initial="initial"

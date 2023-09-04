@@ -26,11 +26,11 @@ export const Contacts = () => {
       }}
       transition={{
         duration: 1,
-        delay: 1,
+        delay: 0.5,
       }}
     >
       <SectionHeading title="Контакты" />
-      <p className="text-slate-600 text-center leading-relaxed mb-8">
+      <p className="text-slate-600 text-center leading-relaxed mb-8 dark:text-white/75">
         Пожалуйста, напишите мне напрямую на почту{' '}
         <a className="underline" href="mailto:supersoroko@gmail.com">
           supersoroko@gmail.com
@@ -52,7 +52,7 @@ export const Contacts = () => {
         }}
       >
         <input
-          className="h-12 rounded-lg px-4 borderBlack"
+          className="h-12 rounded-lg px-4 borderBlack dark:bg-white/10 dark:outline-none dark:focus:border-white"
           type="email"
           name="email"
           placeholder="Ваш email"
@@ -60,7 +60,8 @@ export const Contacts = () => {
           required
         />
         <textarea
-          className="h-52 rounded-lg borderBlack p-4"
+          className="h-52 rounded-lg borderBlack p-4 dark:bg-white/10 dark:outline-none dark:focus:border-white
+          resize-none"
           name="message"
           placeholder="Ваше сообщение"
           value={value}
