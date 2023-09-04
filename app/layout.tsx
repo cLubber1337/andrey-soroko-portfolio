@@ -6,6 +6,7 @@ import { Montserrat } from 'next/font/google'
 import { Header } from '@/components/header'
 import { ActiveSectionContextProvider } from '@/context/active-section-context'
 import { ToastContainer } from 'react-toastify'
+import { Footer } from '@/components/footer'
 
 const inter = Montserrat({ subsets: ['cyrillic'], weight: '500' })
 
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <ActiveSectionContextProvider>
           <Header />
           {children}
+          <Footer />
         </ActiveSectionContextProvider>
       </body>
     </html>

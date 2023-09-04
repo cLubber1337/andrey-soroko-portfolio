@@ -17,7 +17,7 @@ export const Contacts = () => {
     <motion.section
       id="contact"
       ref={ref}
-      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
+      className="mb-20 sm:mb-44 w-[min(100%,38rem)] text-center"
       initial={{
         opacity: 0,
       }}
@@ -47,7 +47,7 @@ export const Contacts = () => {
             return
           }
 
-          toast.success('Email sent successfully!')
+          toast.success('Сообщение успешно отправлено')
           setValue('')
         }}
       >

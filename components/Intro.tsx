@@ -60,7 +60,7 @@ export const Intro = () => {
         <span className="font-bold">Привет</span>, меня зовут
         <span className="font-bold"> Андрей Сороко.</span> Я
         <span className="font-bold"> front-end разработчкик</span> с
-        <span className="font-bold"> 1.5 года</span> опыта. Мне нравиться создавать
+        <span className="font-bold"> 1.5 годами</span> опыта. Мне нравиться создавать
         <span className="italic"> сайты и приложения</span>. Моя специализация -
         <span className="underline"> React (Next.js)</span>.
       </motion.h1>
