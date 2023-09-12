@@ -10,7 +10,7 @@ export const sendEmail = async (formData: FormData) => {
   const email = formData.get('email')
   const message = formData.get('message')
 
-  if (!validateValue(message, 5000)) {
+  if (!validateValue(message, 4990)) {
     return {
       error: 'Неверное сообщение',
     }
