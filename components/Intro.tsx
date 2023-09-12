@@ -88,7 +88,7 @@ export const Intro = () => {
           rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105
           transition-all cursor-pointer borderBlack
           hover:text-slate-950 dark:bg-white/20 dark:hover:text-white"
-          href="/AndreySoroko.pdf"
+          href="/andrey-soroko-dev.pdf"
           download
         >
           Скачать CV <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
